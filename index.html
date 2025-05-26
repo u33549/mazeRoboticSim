@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Creator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="libs/mater/matter.min.js"></script>
+    <script src="libs/ace/ace.js"></script>
+    <!-- <link rel="stylesheet" href="libs/ace/ace.css"> -->
+
+
+</head>
+
+<body>
+    <div class="layers">
+        <canvas id="layer1"></canvas>
+        <canvas id="layer2"></canvas>
+
+    </div>
+    <div class="paramaters">
+        <table border="2">
+            <thead>
+                <tr>
+                    <th colspan="2">Robot</th>
+                </tr>
+                <tr>
+                    <th>İsim</th>
+                    <th>Değer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pozisyon</td>
+                    <td id="robotPos">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>Boyutlar</td>
+                    <td id="robotDimensions">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Mutlak Sensör</td>
+                    <td id="robotAbsoluteDistance">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Sensör-A</td>
+                    <td id="sensorA">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>Sensör-B</td>
+                    <td id="sensorB">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Sensör-C</td>
+                    <td id="sensorC">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Sensör-D</td>
+                    <td id="sensorD">&nbsp;</td>
+                </tr>
+                
+                <tr>
+                    <td>Yan Sensörler</td>
+                    <td id="robotSideSensors">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>Sensör Menzili</td>
+                    <td id="robotSensorLimit">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Renk Sensörü</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>İlerleme Hızı</td>
+                    <td id="robotMoveSpeed">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Dönme Hızı</td>
+                    <td id="robotRotationSpeed">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Açı</td>
+                    <td id="robotAngle">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>İvme</td>
+                    <td>-</td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+        <table border="2">
+            <thead>
+                <tr>
+                    <th colspan="2">Labirent</th>
+                </tr>
+                <tr>
+                    <th>İsim</th>
+                    <th>Değer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Labirent Boyutları</td>
+                    <td id="mazeDimensions">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>Hücre Boyutları</td>
+                    <td id="cellSize">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td>Duvar Kalınlığı</td>
+                    <td id="lineWidth">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <div class="panels">
+        <div class="titles">
+            <div class="title">documan</div>
+            <div class="title">settings</div>
+
+            <div class="title">params</div>
+            <div class="title">codeEditor</div>
+            <div class="title">logs</div>
+        </div>
+        <div class="panel" id="documan"></div>
+        <div class="panel" id="settings"></div>
+
+        <div class="panel" id="params"></div>
+        <div class="panel" id="codeEditor"></div>
+        <div class="panel" id="logs"></div>
+        
+    </div>
+    <!-- <div id="editor"></div> -->
+
+
+    <script src="js/config.js"></script>
+    <script src="js/maze.js"></script>
+    <script src="js/robot.js"></script>
+    <script src="js/paramaterWrite.js"></script>
+    <script src="js/simu.js"></script> 
+    <script src="js/ide.js"></script>
+    <script style="display:none;" id="runCodeScript"></script>
+</body>
+
+</html>
